@@ -29,7 +29,7 @@ userRequest.onload = function() {
 userRequest.send();
 
 let productsUser = new XMLHttpRequest()
-productsUser.open("GET", url)
+productsUser.open("GET", `${url}/products/${id}`)
 productsUser.responseType = 'json'
 productsUser.send()
 productsUser.onload = function() {
