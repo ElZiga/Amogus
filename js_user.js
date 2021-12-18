@@ -27,3 +27,12 @@ userRequest.onload = function() {
 }
 
 userRequest.send();
+
+let productsUser = new XMLHttpRequest()
+productsUser.open("GET", url)
+productsUser.responseType = 'json'
+productsUser.send()
+productsUser.onload = function() {
+	let products = productsUser.response
+	console.log(products)
+}
